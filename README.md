@@ -3,6 +3,8 @@
 # Search Engine: Elasticsearch
 # Features: Auto Migrate data from MariaDB to Elasticsearch 
 
+YOU CAN READ MORE AT : src/main/resources/settings/old
+
 # Pre-required: 
 # 1. You have installed and run a Elasticsearch on Your server with version <= 6.8.X, In this example I'm using ES version-6.8.4
 # 2. Setting on Elasticsearch Server 
