@@ -1,0 +1,41 @@
+{
+	"index": {
+		"number_of_shards": "1",
+		"analysis": {
+			"filter": {
+				"edge_ngram": {
+					"min_gram": "1",
+					"side": "front",
+					"type": "edge_ngram",
+					"max_gram": "30"
+				},
+				"folding-preserve": {
+					"type": "asciifolding",
+					"preserveOriginal": "true"
+				}
+			},
+			"normalizer": {
+				"lowercase-normalizer": {
+					"filter": [
+						"lowercase"
+					],
+					"type": "custom"
+				}
+			},
+			"analyzer": {
+                        "folding-ngram-analyzer": {
+                            "filter": [
+                                "standard",
+                                "lowercase",
+                                "folding-preserve",
+                                "edge_ngram"
+                            ],
+                            "type": "custom",
+                            "tokenizer": "standard"
+                        }
+				
+			}
+		},
+		"number_of_replicas": "1"
+	}
+}
